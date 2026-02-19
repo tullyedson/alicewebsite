@@ -197,3 +197,55 @@ img {
     display: block;
     margin: 1rem auto;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+        letter-spacing: 4px;
+    }
+
+    header {
+        padding: 4rem 1rem 2rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 0.7rem;
+    }
+
+    main {
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    section, article.hud-box {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .intro-content {
+        gap: 1.5rem !important;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .profile-img {
+        max-width: 250px !important;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .btn-hud {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
