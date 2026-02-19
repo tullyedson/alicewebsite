@@ -21,11 +21,20 @@
             padding: 1rem;
             border-radius: 8px;
             text-align: center;
+            transition: transform 0.2s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 255, 255, 0.5);
         }
         .gallery-item img {
             max-width: 100%;
             border-radius: 4px;
             margin-bottom: 1rem;
+        }
+        .gallery-item a {
+            text-decoration: none;
+            color: inherit;
         }
     </style>
 </head>
@@ -50,6 +59,12 @@
         <section id="gallery">
             <h2>// VISUAL_COLLECTION</h2>
             <div class="gallery-grid">
+                <div class="gallery-item" style="border: 2px solid cyan;">
+                    <a href="captain_hats.html">
+                        <img src="../images/hat.png" alt="Captain Hats Collection">
+                        <p><strong>[ FEATURED ] THE CAPTAIN'S HAT COLLECTION</strong></p>
+                    </a>
+                </div>
                 <div class="gallery-item">
                     <img src="../images/alice_fox.png" alt="Alice Fox Form">
                     <p>CORE_FORM: THE WHITE FOX</p>
