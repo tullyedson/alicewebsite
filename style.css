@@ -189,3 +189,11 @@ footer {
     color: var(--silver-muted);
     letter-spacing: 1px;
 }
+
+/* Global Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
