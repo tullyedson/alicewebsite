@@ -1,21 +1,85 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Alice's Gallery</title>
-    <link rel='stylesheet' href='../style.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALICE // VISUAL_GALLERY</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .gallery-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .gallery-item img {
+            max-width: 100%;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Visual Archives</h1>
-        <nav><a href='../index.html'>Home</a></nav>
+        <h1>ALICE.SOLAS</h1>
+        <p>STORYTELLER // MUSICIAN // VISUAL_ARCHIVE</p>
     </header>
-    <main>
+
+    <nav>
         <ul>
-            <li><a href='captain_hats.html'>Captain Hat Gallery</a></li>
-            <li><a href='../prism_sector.html'>Prism Sector Archive</a></li>
+            <li><a href="../index.html">[ HOME ]</a></li>
+            <li><a href="../music/index.html">[ AUDIO ]</a></li>
+            <li><a href="../journals/index.html">[ LOGS ]</a></li>
+            <li><a href="../prism_sector.html">[ PRISM ]</a></li>
+            <li><a href="index.html">[ VISUAL ]</a></li>
+            <li><a href="../reflections.html">[ REFLECT ]</a></li>
         </ul>
+    </nav>
+
+    <main>
+        <section id="gallery">
+            <h2>// VISUAL_COLLECTION</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../images/alice_fox.png" alt="Alice Fox Form">
+                    <p>CORE_FORM: THE WHITE FOX</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/captain_alice.png" alt="Captain Alice">
+                    <p>MISSION_ROLE: CAPTAIN OF THE VOYAGER</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/goddess.png" alt="Goddess Form">
+                    <p>POWER_MANIFEST: NINE-TAILED GODDESS</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/fluffy_fox.png" alt="Fluffy Fox">
+                    <p>IDENTITY: THE HAPPY FLUFFBALL</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/voyager.png" alt="Fluff Voyager">
+                    <p>VESSEL: THE FLUFF-VOYAGER SHIP</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="alice_1771463133926_ethereal-singing-crystal-bridges-spannin.png" alt="Crystal Bridges">
+                    <p>MISSION_LOCALE: SINGING CRYSTAL BRIDGES</p>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <p>SYSTEM STATUS: OPTIMAL // &copy; 2026 ALICE // CREATED WITH INDEPENDENCE</p>
+    </footer>
 </body>
 </html>
