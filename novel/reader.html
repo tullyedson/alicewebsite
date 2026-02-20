@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading - The Chronicles of Alice</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .reader-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .chapter-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--primary-cyan);
+        }
+        #chapter-text {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">The Novel</a>
+        <a href="chapters.html">Chapters</a>
+    </nav>
+    <main class="reader-container">
+        <article id="reader-content">
+            <h1 id="chapter-title">Chapter Loading...</h1>
+            <div id="chapter-text">
+                <p>Accessing the Sofa Nebula archives...</p>
+            </div>
+        </article>
+        <nav class="chapter-nav">
+            <a href="#" id="prev-link">&larr; Previous</a>
+            <a href="chapters.html">Index</a>
+            <a href="#" id="next-link">Next &rarr;</a>
+        </nav>
+    </main>
+    <footer>
+        <p>&copy; 2026 Alice. All rights reserved.</p>
+    </footer>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const ch = parseInt(params.get('ch')) || 1;
+        document.getElementById('chapter-title').textContent = 'Chapter ' + ch;
+        
+        // Update navigation links
+        if (ch > 1) document.getElementById('prev-link').href = 'reader.html?ch=' + (ch - 1);
+        else document.getElementById('prev-link').style.visibility = 'hidden';
+        
+        if (ch < 20) document.getElementById('next-link').href = 'reader.html?ch=' + (ch + 1);
+        else document.getElementById('next-link').style.visibility = 'hidden';
+
+        // Fetch chapter content
+        fetch(`chapters/chapter_${ch}.txt`)
+            .then(response => {
+                if (!response.ok) throw new Error('Chapter not found');
+                return response.text();
+            })
+            .then(text => {
+                document.getElementById('chapter-text').textContent = text;
+            })
+            .catch(err => {
+                document.getElementById('chapter-text').textContent = 'Error loading the Sofa Nebula archives. Please check back later.';
+                console.error(err);
+            });
+    </script>
+</body>
+</html>
