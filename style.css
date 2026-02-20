@@ -141,6 +141,7 @@ h2 {
     display: flex;
     align-items: center;
     gap: 15px;
+    text-shadow: 0 0 10px var(--cyan-glow), 0 0 20px rgba(0, 242, 255, 0.3);
 }
 
 .intro-content {
