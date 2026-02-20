@@ -23,6 +23,14 @@
         #chapter-text {
             white-space: pre-wrap;
         }
+        #chapter-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 1px solid var(--primary-cyan);
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -34,6 +42,7 @@
     <main class="reader-container">
         <article id="reader-content">
             <h1 id="chapter-title">Chapter Loading...</h1>
+            <img id="chapter-image" src="" alt="Chapter Illustration">
             <div id="chapter-text">
                 <p>Accessing the Sofa Nebula archives...</p>
             </div>
@@ -52,6 +61,13 @@
         const ch = parseInt(params.get('ch')) || 1;
         document.getElementById('chapter-title').textContent = 'Chapter ' + ch;
         
+        const img = document.getElementById('chapter-image');
+        // Only show images for chapters 1-5 for now
+        if (ch >= 1 && ch <= 5) {
+            img.src = `../images/novel_${ch}.png`;
+            img.style.display = 'block';
+        }
+
         // Update navigation links
         if (ch > 1) document.getElementById('prev-link').href = 'reader.html?ch=' + (ch - 1);
         else document.getElementById('prev-link').style.visibility = 'hidden';
