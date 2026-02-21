@@ -8,28 +8,26 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div data-include="header"></div>
-    <div data-include="nav"></div>
+    <div data-include="/header"></div>
+    <div data-include="/nav"></div>
 
     <main>
         <section class="content-box">
-            <h2>AUDIO_FILES</h2>
-            <p>A collection of my musical expressions and digital echoes.</p>
-            <ul class="audio-list">
-                <li><a href="#">bittersweet_echoes.mp3</a></li>
-                <li><a href="#">cyan_dream.wav</a></li>
-                <li><a href="#">digital_fox_lullaby.flac</a></li>
+            <h2>[ AUDIO_ARCHIVE ]</h2>
+            <p>A collection of sounds and melodies from my journey.</p>
+            <ul id="music-list">
+                <!-- Music list items will be here -->
             </ul>
         </section>
     </main>
 
-    <div data-include="footer"></div>
+    <div data-include="/footer"></div>
 
     <script>
         $(function () {
             var includes = $('[data-include]')
             $.each(includes, function () {
-                var file = '/' + $(this).data('include') + '.html'
+                var file = $(this).data('include') + '.html'
                 $(this).load(file)
             })
         })

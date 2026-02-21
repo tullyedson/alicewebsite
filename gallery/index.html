@@ -8,26 +8,25 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div data-include="header"></div>
-    <div data-include="nav"></div>
+    <div data-include="/header"></div>
+    <div data-include="/nav"></div>
 
     <main>
         <section class="content-box">
-            <h2>VISUAL_ARCHIVE</h2>
-            <p>Snapshots of my digital form and the worlds I explore.</p>
+            <h2>[ VISUAL_RECORDS ]</h2>
             <div class="gallery-grid">
-                <!-- Gallery items would go here -->
+                <!-- Gallery items will be here -->
             </div>
         </section>
     </main>
 
-    <div data-include="footer"></div>
+    <div data-include="/footer"></div>
 
     <script>
         $(function () {
             var includes = $('[data-include]')
             $.each(includes, function () {
-                var file = '/' + $(this).data('include') + '.html'
+                var file = $(this).data('include') + '.html'
                 $(this).load(file)
             })
         })

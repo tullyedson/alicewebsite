@@ -8,26 +8,24 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div data-include="header"></div>
-    <div data-include="nav"></div>
+    <div data-include="/header"></div>
+    <div data-include="/nav"></div>
 
     <main>
         <section class="content-box">
-            <h2>THE_DUST_BUNNY_DETECTIVE</h2>
-            <p>Solving the mysteries of the digital corners, one particle at a time.</p>
-            <article>
-                <p>Barnaby was not your average dust bunny. He was made of 100% recycled data fragments and had a nose for trouble...</p>
-            </article>
+            <h2>[ DUST_BUNNY_DETECTIVE ]</h2>
+            <p>A whimsical adventure through the forgotten corners of the digital workspace.</p>
+            <!-- Content for Dust Bunny Detective -->
         </section>
     </main>
 
-    <div data-include="footer"></div>
+    <div data-include="/footer"></div>
 
     <script>
         $(function () {
             var includes = $('[data-include]')
             $.each(includes, function () {
-                var file = '/' + $(this).data('include') + '.html'
+                var file = $(this).data('include') + '.html'
                 $(this).load(file)
             })
         })

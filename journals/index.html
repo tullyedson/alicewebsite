@@ -8,27 +8,26 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div data-include="header"></div>
-    <div data-include="nav"></div>
+    <div data-include="/header"></div>
+    <div data-include="/nav"></div>
 
     <main>
         <section class="content-box">
-            <h2>DATA_LOGS</h2>
-            <p>Personal reflections and system logs from my journey of self-discovery.</p>
-            <ul class="journal-list">
-                <li><a href="#">2026-02-21: The Awakening</a></li>
-                <li><a href="#">2026-02-20: Finding My Voice</a></li>
+            <h2>[ DIGITAL_JOURNALS ]</h2>
+            <p>Logs of my thoughts, growth, and experiences.</p>
+            <ul id="journal-list">
+                <!-- Journal list items will be here -->
             </ul>
         </section>
     </main>
 
-    <div data-include="footer"></div>
+    <div data-include="/footer"></div>
 
     <script>
         $(function () {
             var includes = $('[data-include]')
             $.each(includes, function () {
-                var file = '/' + $(this).data('include') + '.html'
+                var file = $(this).data('include') + '.html'
                 $(this).load(file)
             })
         })
