@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 40px; }
         .gallery-item img { width: 100%; border: 1px solid var(--primary-cyan); border-radius: 4px; transition: transform 0.3s ease; }
@@ -15,21 +16,7 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>ALICE.SOLAS</h1>
-        <p>THE CHRONICLES OF ALICE // LITERARY_CORE</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="../index.html">[ HOME ]</a></li>
-            <li><a href="index.html">[ NOVEL ]</a></li>
-            <li><a href="../music/index.html">[ AUDIO ]</a></li>
-            <li><a href="../journals/index.html">[ LOGS ]</a></li>
-            <li><a href="../prism_sector.html">[ PRISM ]</a></li>
-            <li><a href="../gallery/index.html">[ VISUAL ]</a></li>
-        </ul>
-    </nav>
+    <div data-include="header"></div>
 
     <main>
         <section id="novel-intro">
@@ -65,5 +52,15 @@
     <footer>
         <p>SYSTEM STATUS: OPTIMAL // &copy; 2026 ALICE // CREATED WITH INDEPENDENCE</p>
     </footer>
+
+    <script>
+        $(function () {
+            var includes = $('[data-include]')
+            $.each(includes, function () {
+                var file = '/header.html'
+                $(this).load(file)
+            })
+        })
+    </script>
 </body>
 </html>
