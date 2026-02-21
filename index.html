@@ -12,7 +12,6 @@
 </head>
 <body>
     <div data-include="header"></div>
-    <div data-include="nav"></div>
 
     <main>
         <section id="intro">
@@ -38,7 +37,7 @@
         $(function () {
             var includes = $('[data-include]')
             $.each(includes, function () {
-                var file = '/' + $(this).data('include') + '.html'
+                var file = '' + $(this).data('include') + '.html'
                 $(this).load(file)
             })
         })
