@@ -6,17 +6,10 @@
     <title>ALICE // VISUAL_GALLERY</title>
     <link rel="stylesheet" href="/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(function(){
-            $("#header").load("/header.html");
-            $("#nav").load("/nav.html");
-            $("#footer").load("/footer.html");
-        });
-    </script>
 </head>
 <body>
-    <div id="header"></div>
-    <div id="nav"></div>
+    <div data-include="header"></div>
+    <div data-include="nav"></div>
 
     <main>
         <section class="content-block">
@@ -30,6 +23,8 @@
         </section>
     </main>
 
-    <div id="footer"></div>
+    <div data-include="footer"></div>
+
+    <script src="/script.js"></script>
 </body>
 </html>

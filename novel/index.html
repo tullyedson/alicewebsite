@@ -13,10 +13,11 @@
         .gallery-item img { width: 100%; border: 1px solid var(--primary-cyan); border-radius: 4px; transition: transform 0.3s ease; }
         .gallery-item img:hover { transform: scale(1.05); }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <div id="nav-placeholder"></div>
+    <div data-include="header"></div>
+    <div data-include="nav"></div>
 
     <main>
         <section id="novel-intro">
@@ -49,9 +50,8 @@
         </section>
     </main>
 
-    <div id="footer-placeholder"></div>
+    <div data-include="footer"></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/script.js"></script>
 </body>
 </html>
