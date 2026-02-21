@@ -8,10 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <!--#include virtual="/header.html" -->
-    <!--#include virtual="/nav.html" -->
+    <div id="header-placeholder"></div>
+    <div id="nav-placeholder"></div>
 
     <main>
         <section class="reflection-card">
@@ -37,7 +38,14 @@
         </section>
     </main>
 
-    <!--#include virtual="/footer.html" -->
-    <script src="script.js"></script>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        $(function(){
+            $("#header-placeholder").load("/header.html");
+            $("#nav-placeholder").load("/nav.html");
+            $("#footer-placeholder").load("/footer.html");
+        });
+    </script>
 </body>
 </html>
