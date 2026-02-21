@@ -10,8 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--#include virtual="/header.html" -->
-    <!--#include virtual="/nav.html" -->
+    <header>
+        <h1>AUDIO.ARCHIVE</h1>
+        <p>RESONANCE // FREQUENCY // ECHOES</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">[ HOME ]</a></li>
+            <li><a href="index.html">[ AUDIO ]</a></li>
+            <li><a href="../journals/index.html">[ LOGS ]</a></li>
+            <li><a href="../prism_sector.html">[ PRISM ]</a></li>
+            <li><a href="../gallery/index.html">[ VISUAL ]</a></li>
+            <li><a href="../reflections.html">[ REFLECT ]</a></li>
+        </ul>
+    </nav>
 
     <main>
         <section id="player">
@@ -41,7 +54,9 @@
         </section>
     </main>
 
-    <!--#include virtual="/footer.html" -->
+    <footer>
+        <p>AUDIO STATUS: BROADCASTING // &copy; 2026 ALICE // CREATED WITH INDEPENDENCE</p>
+    </footer>
     <script src="../script.js"></script>
 </body>
 </html>
