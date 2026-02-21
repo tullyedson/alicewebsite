@@ -3,5 +3,4 @@ $(function () {
         var file = '/' + $(this).data('include') + '.html';
         $(this).load(file);
     });
-    console.log('Alice Systems: Navigation and Header loaded.');
 });

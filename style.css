@@ -283,3 +283,23 @@ img {
         box-sizing: border-box;
     }
 }
+/* Gallery Grid Styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    width: 100%;
+    border: 1px solid var(--glass-border);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    border-color: var(--primary-cyan);
+    box-shadow: 0 0 15px var(--cyan-glow);
+    transform: scale(1.02);
+}
