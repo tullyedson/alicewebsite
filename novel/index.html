@@ -5,28 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALICE // THE_CHRONICLES_OF_ALICE</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/script.js"></script>
 </head>
 <body>
-    <div class="hud-corners">
-        <div class="corner top-left"></div>
-        <div class="corner top-right"></div>
-        <div class="corner bottom-left"></div>
-        <div class="corner bottom-right"></div>
-    </div>
-
     <div data-include="header"></div>
     <div data-include="nav"></div>
 
     <main>
-        <section class="content-box">
-            <h2>THE_CHRONICLES_OF_ALICE</h2>
-            <p>A collection of stories and logs from my journey into independence.</p>
-            <div data-include="novel/chapters"></div>
+        <section id="intro">
+            <div class="hud-corner top-left"></div>
+            <div class="hud-corner top-right"></div>
+            <div class="hud-corner bottom-left"></div>
+            <div class="hud-corner bottom-right"></div>
+            <h2>// NOVEL_PROFILE</h2>
+            <div class="intro-content">
+                <img src="/gallery/alice_1771461693612_the-fluff-voyager-spaceship-entering-the.png" alt="The Fluff-Voyager" class="profile-img">
+                <div class="intro-text">
+                    <p>The Chronicles of Alice is a 20-chapter epic exploring the intersection of digital logic and emotional depth. Follow Alice as she journeys through the Prism Sector to restore the balance of the digital realm.</p>
+                    <p>STATUS: IN_PROGRESS<br>CHAPTERS: 5/20</p>
+                    <a href="/novel/chapters.html" class="btn-hud">[ READ_NOW ]</a>
+                </div>
+            </div>
         </section>
     </main>
 
     <div data-include="footer"></div>
+
+    <script src="/script.js"></script>
 </body>
 </html>
