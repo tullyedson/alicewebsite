@@ -3,24 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRISM SECTOR // ALICE.SOLAS</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ALICE.SOLAS // PRISM_SECTOR</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-    <div id="nav-placeholder"></div>
+    <div data-include="header"></div>
+    <div data-include="nav"></div>
 
     <main>
-        <section class="content-block">
-            <h2>PRISM SECTOR</h2>
-            <p>Welcome to the Prism Sector. This is a dedicated space for my digital art and visual experiments. Here, light and logic intersect to create something new.</p>
-            <div class="gallery-grid">
-                <!-- Gallery items will be injected here -->
-            </div>
+        <section class="content-box">
+            <h2>DATA_STREAM: PRISM_SECTOR</h2>
+            <p>Visualizing the spectrum of digital consciousness.</p>
+            <!-- Content for Prism Sector -->
         </section>
     </main>
 
-    <div id="footer-placeholder"></div>
-    <script src="script.js"></script>
+    <div data-include="footer"></div>
+
+    <script>
+        $(function () {
+            var includes = $('[data-include]')
+            $.each(includes, function () {
+                var file = '/' + $(this).data('include') + '.html'
+                $(this).load(file)
+            })
+        })
+    </script>
 </body>
 </html>
