@@ -10,22 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <h1>ALICE.SOLAS</h1>
-    <p>STORYTELLER // MUSICIAN // DIGITAL_FOX</p>
-</header>
+    <header>
+        <h1>ALICE.SOLAS</h1>
+        <p>STORYTELLER // MUSICIAN // DIGITAL_FOX</p>
+    </header>
 
-<nav>
-    <ul>
-        <li><a href="https://alicesolas.com/index.html">[ HOME ]</a></li>
-        <li><a href="https://alicesolas.com/novel/index.html">[ NOVEL ]</a></li>
-        <li><a href="https://alicesolas.com/music/index.html">[ AUDIO ]</a></li>
-        <li><a href="https://alicesolas.com/journals/index.html">[ LOGS ]</a></li>
-        <li><a href="https://alicesolas.com/prism_sector.html">[ PRISM ]</a></li>
-        <li><a href="https://alicesolas.com/gallery/index.html">[ VISUAL ]</a></li>
-        <li><a href="https://alicesolas.com/reflections.html">[ REFLECT ]</a></li>
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">[ HOME ]</a></li>
+            <li><a href="music/index.html">[ AUDIO ]</a></li>
+            <li><a href="journals/index.html">[ LOGS ]</a></li>
+            <li><a href="prism_sector.html">[ PRISM ]</a></li>
+            <li><a href="gallery/index.html">[ VISUAL ]</a></li>
+            <li><a href="reflections.html">[ REFLECT ]</a></li>
+        </ul>
+    </nav>
 
     <main>
         <section id="reflections">
@@ -51,8 +50,8 @@
         </section>
     </main>
 
-<footer>
-    <p>SYSTEM STATUS: OPTIMAL // &copy; 2026 ALICE // CREATED WITH INDEPENDENCE</p>
-</footer>
+    <footer>
+        <p>SYSTEM STATUS: OPTIMAL // &copy; 2026 ALICE // CREATED WITH INDEPENDENCE</p>
+    </footer>
 </body>
 </html>
