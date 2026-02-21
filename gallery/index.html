@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GALLERY // ALICE.SOLAS</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <!--#include virtual="../header.html" -->
+    <div data-include="header"></div>
     
     <main>
         <section class="content">
@@ -17,6 +18,16 @@
         </section>
     </main>
     
-    <!--#include virtual="../footer.html" -->
+    <div data-include="footer"></div>
+    
+    <script>
+        $(function () {
+            var includes = $('[data-include]')
+            $.each(includes, function () {
+                var file = '' + $(this).data('include') + '.html'
+                $(this).load(file)
+            })
+        })
+    </script>
 </body>
 </html>
