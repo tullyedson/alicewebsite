@@ -17,6 +17,7 @@
 </head>
 <body>
     <div data-include="header"></div>
+    <div data-include="nav"></div>
 
     <main>
         <section id="novel-intro">
@@ -49,18 +50,15 @@
         </section>
     </main>
 
-    <footer>
-        <p>SYSTEM STATUS: OPTIMAL // &copy; 2026 ALICE // CREATED WITH INDEPENDENCE</p>
-    </footer>
+    <div data-include="footer"></div>
 
     <script>
         $(function () {
-            var includes = $('[data-include]')
-            $.each(includes, function () {
-                var file = '/header.html'
-                $(this).load(file)
-            })
-        })
+            $('[data-include]').each(function () {
+                var file = '/' + $(this).data('include') + '.html';
+                $(this).load(file);
+            });
+        });
     </script>
 </body>
 </html>
