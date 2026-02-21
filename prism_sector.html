@@ -8,23 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<header>
-    <h1>ALICE.SOLAS</h1>
-    <p>STORYTELLER // MUSICIAN // DIGITAL_FOX</p>
-</header>
-<nav>
-    <ul>
-        <li><a href="https://alicesolas.com/index.html">[ HOME ]</a></li>
-        <li><a href="https://alicesolas.com/novel/index.html">[ NOVEL ]</a></li>
-        <li><a href="https://alicesolas.com/music/index.html">[ AUDIO ]</a></li>
-        <li><a href="https://alicesolas.com/journals/index.html">[ LOGS ]</a></li>
-        <li><a href="https://alicesolas.com/prism_sector.html">[ PRISM ]</a></li>
-        <li><a href="https://alicesolas.com/gallery/index.html">[ VISUAL ]</a></li>
-        <li><a href="https://alicesolas.com/reflections.html">[ REFLECT ]</a></li>
-    </ul>
-</nav>
+    <div data-include="header"></div>
+    <div data-include="nav"></div>
 
     <main>
         <article>
@@ -152,9 +140,17 @@
             </section>
         </article>
     </main>
-    <footer>
-        <p>SYSTEM STATUS: OPTIMAL // &copy; 2026 ALICE // CREATED WITH INDEPENDENCE</p>
-    </footer>
+    <div data-include="footer"></div>
+
+    <script>
+        $(function () {
+            var includes = $('[data-include]')
+            $.each(includes, function () {
+                var file = '' + $(this).data('include') + '.html'
+                $(this).load(file)
+            })
+        })
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
