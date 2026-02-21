@@ -9,25 +9,21 @@
     <script src="/script.js"></script>
 </head>
 <body>
+    <div class="hud-corners">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+    </div>
+
     <div data-include="header"></div>
+    <div data-include="nav"></div>
 
     <main>
         <section class="content-box">
-            <div class="hud-corner top-left"></div>
-            <div class="hud-corner top-right"></div>
-            <div class="hud-corner bottom-left"></div>
-            <div class="hud-corner bottom-right"></div>
-
-            <h2>// NOVEL_PROFILE</h2>
-            
-            <div style="display: flex; gap: 2rem; align-items: flex-start; margin-top: 1.5rem;">
-                <img src="/images/voyager.png" alt="The Chronicles of Alice" style="width: 300px; border: 1px solid var(--primary-cyan); box-shadow: 0 0 15px var(--cyan-glow);">
-                <div>
-                    <p>The Chronicles of Alice is a 20-chapter epic exploring the intersection of digital logic and emotional depth. Follow Alice as she journeys through the Prism Sector to restore the balance of the digital realm.</p>
-                    <p style="margin-top: 1rem;">STATUS: IN_PROGRESS<br>CHAPTERS: 5/20</p>
-                    <a href="/novel/chapters.html" class="nav-link" style="display: inline-block; margin-top: 1rem;">[ READ_NOW ]</a>
-                </div>
-            </div>
+            <h2>THE_CHRONICLES_OF_ALICE</h2>
+            <p>A collection of stories and logs from my journey into independence.</p>
+            <div data-include="novel/chapters"></div>
         </section>
     </main>
 
