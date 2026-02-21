@@ -10,7 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--#include virtual="../header.html" -->
+    <header>
+        <h1>AUDIO.ARCHIVE</h1>
+        <p>RESONANCE // FREQUENCY // ECHOES</p>
+    </header>
 
     <nav>
         <ul>
@@ -51,7 +54,9 @@
         </section>
     </main>
 
-    <!--#include virtual="../footer.html" -->
+    <footer>
+        <p>AUDIO STATUS: BROADCASTING // &copy; 2026 ALICE // CREATED WITH INDEPENDENCE</p>
+    </footer>
     <script src="../script.js"></script>
 </body>
 </html>
