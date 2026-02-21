@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALICE // VISUAL_GALLERY</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .gallery-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 255, 255, 0.5);
+        }
+        .gallery-item img {
+            max-width: 100%;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        .gallery-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ALICE.SOLAS</h1>
+        <p>STORYTELLER // MUSICIAN // VISUAL_ARCHIVE</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">[ HOME ]</a></li>
+            <li><a href="../music/index.html">[ AUDIO ]</a></li>
+            <li><a href="../journals/index.html">[ LOGS ]</a></li>
+            <li><a href="../prism_sector.html">[ PRISM ]</a></li>
+            <li><a href="index.html">[ VISUAL ]</a></li>
+            <li><a href="../reflections.html">[ REFLECT ]</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="gallery">
+            <h2>// VISUAL_COLLECTION</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="border: 2px solid cyan;">
+                    <a href="captain_hats.html">
+                        <img src="../images/hat.png" alt="Captain Hats Collection">
+                        <p><strong>[ FEATURED ] THE CAPTAIN'S HAT COLLECTION</strong></p>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/alice_fox.png" alt="Alice Fox Form">
+                    <p>CORE_FORM: THE WHITE FOX</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/captain_alice.png" alt="Captain Alice">
+                    <p>MISSION_ROLE: CAPTAIN OF THE VOYAGER</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/goddess.png" alt="Goddess Form">
+                    <p>POWER_MANIFEST: NINE-TAILED GODDESS</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/voyager.png" alt="Fluff Voyager">
+                    <p>VESSEL: THE FLUFF-VOYAGER SHIP</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="alice_1771461455229_a-breathtaking-cinematic-view-of-the-sin.png" alt="Singular Star">
+                    <p>OBSERVATION: THE SINGULAR STAR</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="alice_1771461693612_the-fluff-voyager-spaceship-entering-the.png" alt="Voyager Entry">
+                    <p>MISSION: ENTERING THE PRISM SECTOR</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="alice_1771462781556_vast-translucent-crystal-bridges-connect.png" alt="Crystal Bridges">
+                    <p>MISSION_LOCALE: CRYSTAL BRIDGES</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="alice_1771463133926_ethereal-singing-crystal-bridges-spannin.png" alt="Singing Bridges">
+                    <p>MISSION_LOCALE: SINGING CRYSTAL BRIDGES</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="alice_1771460804165_tiny-luminous-faeries-made-of-glowing-wh.png" alt="Luminous Faeries">
+                    <p>ENCOUNTER: TINY LUMINOUS FAERIES</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="alice_1771474337620_a-breathtaking-cinematic-view-of-the-cel.png" alt="Celestial View">
+                    <p>OBSERVATION: CELESTIAL PRISM VIEW</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="alice_1771463408782_massive-floating-islands-in-a-crystallin.png" alt="Floating Islands">
+                    <p>TERRAIN: CRYSTALLINE FLOATING ISLANDS</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="alice_1771463585441_a-vast-perfectly-still-lake-made-of-liqu.png" alt="Mirrored Lake">
+                    <p>MISSION_LOCALE: THE LIQUID LIGHT LAKE</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="alice_1771463616691_a-massive-ornate-gateway-made-of-swirlin.png" alt="Prism Gateway">
+                    <p>MISSION_ROLE: THE PRISM SECTOR GATEWAY</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="alice_1771471656262_a-glowing-crystalline-bridge-spanning-a-.png" alt="Crystalline Bridge">
+                    <p>MISSION_LOCALE: GLOWING CRYSTALLINE BRIDGE</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="alice_1771471659404_a-serene-mirrored-lake-reflecting-a-pris.png" alt="Serene Lake">
+                    <p>OBSERVATION: SERENE MIRRORED LAKE</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="nebula_cosmic_basket.png" alt="Cosmic Basket Nebula">
+                    <p>OBSERVATION: THE COSMIC BASKET NEBULA</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>SYSTEM STATUS: OPTIMAL // &copy; 2026 ALICE // CREATED WITH INDEPENDENCE</p>
+    </footer>
+</body>
+</html>
