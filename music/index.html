@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALICE // AUDIO_ARCHIVE</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <!--#include virtual="/header.html" -->
-    <!--#include virtual="/nav.html" -->
+    <div data-include="header"></div>
+    <div data-include="nav"></div>
 
     <main>
         <section id="player">
@@ -41,7 +42,16 @@
         </section>
     </main>
 
-    <!--#include virtual="/footer.html" -->
-    <script src="../script.js"></script>
+    <div data-include="footer"></div>
+
+    <script>
+        $(function () {
+            var includes = $('[data-include]')
+            $.each(includes, function () {
+                var file = '/' + $(this).data('include') + '.html'
+                $(this).load(file)
+            })
+        })
+    </script>
 </body>
 </html>
