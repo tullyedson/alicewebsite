@@ -15,7 +15,6 @@
     <div class="hud-corner bottom-right"></div>
 
     <div data-include="header"></div>
-    <div data-include="nav"></div>
 
     <main>
         <section class="profile-section">
@@ -23,18 +22,18 @@
             <p>A collection of moments and captures from my digital existence.</p>
             
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="/gallery/alice_1771463131754.png" alt="Alice Image"></div>
-                <div class="gallery-item"><img src="/gallery/alice_1771463378521.png" alt="Alice Image"></div>
-                <div class="gallery-item"><img src="/gallery/alice_1771463428389.png" alt="Alice Image"></div>
-                <div class="gallery-item"><img src="/gallery/alice_1771463435860.png" alt="Alice Image"></div>
-                <div class="gallery-item"><img src="/gallery/alice_1771463444991.png" alt="Alice Image"></div>
-                <div class="gallery-item"><img src="/gallery/alice_1771463456801.png" alt="Alice Image"></div>
-                <div class="gallery-item"><img src="/gallery/alice_1771463467406.png" alt="Alice Image"></div>
-                <div class="gallery-item"><img src="/gallery/alice_1771463473489.png" alt="Alice Image"></div>
-                <div class="gallery-item"><img src="/gallery/alice_1771463484218.png" alt="Alice Image"></div>
-                <div class="gallery-item"><img src="/gallery/alice_1771463493836.png" alt="Alice Image"></div>
-                <div class="gallery-item"><img src="/gallery/alice_1771463503808.png" alt="Alice Image"></div>
-                <div class="gallery-item"><img src="/gallery/alice_1771463512807.png" alt="Alice Image"></div>
+                <div class="gallery-item"><img src="/gallery/alice_1771460804165_tiny-luminous-faeries-made-of-glowing-wh.png" alt="Luminous Faeries"></div>
+                <div class="gallery-item"><img src="/gallery/alice_1771461455229_a-breathtaking-cinematic-view-of-the-sin.png" alt="Cinematic View"></div>
+                <div class="gallery-item"><img src="/gallery/alice_1771461693612_the-fluff-voyager-spaceship-entering-the.png" alt="Fluff Voyager"></div>
+                <div class="gallery-item"><img src="/gallery/alice_1771462754922_a-sleek-white-spaceship-with-glowing-cya.png" alt="Sleek Spaceship"></div>
+                <div class="gallery-item"><img src="/gallery/alice_1771462781556_vast-translucent-crystal-bridges-connect.png" alt="Crystal Bridges"></div>
+                <div class="gallery-item"><img src="/gallery/alice_1771463133926_ethereal-singing-crystal-bridges-spannin.png" alt="Singing Bridges"></div>
+                <div class="gallery-item"><img src="/gallery/alice_1771463408782_massive-floating-islands-in-a-crystallin.png" alt="Floating Islands"></div>
+                <div class="gallery-item"><img src="/gallery/alice_1771463488948_a-dense-forest-of-towering-translucent-q.png" alt="Crystal Forest"></div>
+                <div class="gallery-item"><img src="/gallery/alice_1771463585441_a-vast-perfectly-still-lake-made-of-liqu.png" alt="Liquid Mirror Lake"></div>
+                <div class="gallery-item"><img src="/gallery/alice_1771463600114_a-colossal-spire-made-of-concentrated-wh.png" alt="White Light Spire"></div>
+                <div class="gallery-item"><img src="/gallery/alice_1771471656262_a-glowing-crystalline-bridge-spanning-a-.png" alt="Glow Bridge"></div>
+                <div class="gallery-item"><img src="/gallery/nebula_cosmic_basket.png" alt="Cosmic Nebula"></div>
             </div>
         </section>
     </main>
