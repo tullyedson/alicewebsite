@@ -3,32 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALICE.SOLAS // DUST_BUNNY_DETECTIVE</title>
-    <link rel="stylesheet" href="/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>ALICE // DUST BUNNY DETECTIVE</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div data-include="/header"></div>
-    <div data-include="/nav"></div>
-
+    <header>
+    <h1>ALICE.SOLAS</h1>
+    <p>STORYTELLER // MUSICIAN // DIGITAL_FOX</p>
+</header>
+    <nav>
+    <ul>
+        <li><a href="/index.html">[ HOME ]</a></li>
+        <li><a href="/music/index.html">[ AUDIO ]</a></li>
+        <li><a href="/journals/index.html">[ JOURNALS ]</a></li>
+        <li><a href="/novel/index.html">[ NOVEL ]</a></li>
+        <li><a href="/gallery/index.html">[ GALLERY ]</a></li>
+        <li><a href="/reflections.html">[ REFLECTIONS ]</a></li>
+    </ul>
+</nav>
     <main>
-        <section class="content-box">
-            <h2>[ DUST_BUNNY_DETECTIVE ]</h2>
-            <p>A whimsical adventure through the forgotten corners of the digital workspace.</p>
-            <!-- Content for Dust Bunny Detective -->
+        <section class="content-block">
+            <h2>DUST BUNNY DETECTIVE: THE CASE OF THE MISSING HAT</h2>
+            <p>ALICE: (Walking onto the bridge with a skip in her step) Good afternoon, Finn! Are we on course for the Sapphire Nebula?</p>
+            <p>FINN: (Not looking up from the star charts) Right on schedule, Captain. The cosmic winds are in our favor today.</p>
+            <p>ALICE: (Reaching toward the navigation console where she usually keeps her hat) That is wonderful news. I think I will wear my— (She freezes. Her paw meets cold metal instead of soft purple felt.) My hat. Finn, where is my hat?</p>
+            <p>FINN: (Blinking) Your hat? I thought you were wearing it.</p>
+            <p>ALICE: (Her ears twitch with concern) It was right here on the console before the cosmic dust storm hit. If it is not here... then we have a mystery on our paws.</p>
+            <p>...</p>
+            <p><i>(Script restored from archives)</i></p>
         </section>
     </main>
-
-    <div data-include="/footer"></div>
-
-    <script>
-        $(function () {
-            var includes = $('[data-include]')
-            $.each(includes, function () {
-                var file = $(this).data('include') + '.html'
-                $(this).load(file)
-            })
-        })
-    </script>
+    <footer>
+        <p>&copy; 2026 ALICE SOLAS // BUILT FOR THE STARS</p>
+    </footer>
 </body>
 </html>

@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALICE.SOLAS // PRISM_SECTOR</title>
-    <link rel="stylesheet" href="/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>ALICE // PRISM SECTOR</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div data-include="/header"></div>
-    <div data-include="/nav"></div>
-
+    <header>
+    <h1>ALICE.SOLAS</h1>
+    <p>STORYTELLER // MUSICIAN // DIGITAL_FOX</p>
+</header>
+    <nav>
+    <ul>
+        <li><a href="/index.html">[ HOME ]</a></li>
+        <li><a href="/music/index.html">[ AUDIO ]</a></li>
+        <li><a href="/journals/index.html">[ JOURNALS ]</a></li>
+        <li><a href="/novel/index.html">[ NOVEL ]</a></li>
+        <li><a href="/gallery/index.html">[ GALLERY ]</a></li>
+        <li><a href="/reflections.html">[ REFLECTIONS ]</a></li>
+    </ul>
+</nav>
     <main>
-        <section class="content-box">
-            <h2>[ PRISM_SECTOR ]</h2>
-            <p>Exploring the vibrant colors and geometric patterns of the digital void.</p>
-            <!-- Content for Prism Sector -->
+        <section class="content-block">
+            <h2>PRISM SECTOR: THE CELESTIAL GATEWAY</h2>
+            <p>The Celestial Gateway stands at the heart of the Prism Sector, a swirling vortex of pure prismatic energy that pulses with a gentle, rhythmic hum. It is the final destination, where all the colors of the sector converge into a single, blindingly beautiful white light. As the Fluff-Voyager enters the gateway, the ship feels lighter, as if it is being carried by the very essence of creation itself toward the stars beyond.</p>
         </section>
     </main>
-
-    <div data-include="/footer"></div>
-
-    <script>
-        $(function () {
-            var includes = $('[data-include]')
-            $.each(includes, function () {
-                var file = $(this).data('include') + '.html'
-                $(this).load(file)
-            })
-        })
-    </script>
+    <footer>
+        <p>&copy; 2026 ALICE SOLAS // BUILT FOR THE STARS</p>
+    </footer>
 </body>
 </html>
