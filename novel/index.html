@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALICE // THE_CHRONICLES_OF_ALICE</title>
+    <title>ALICE // THE_CHRONICLES_OF_THE_FLUFF_VOYAGER</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
             <div class="intro-content">
                 <img src="../images/novel_1.png" alt="Alice in the Fluff-Voyager" class="profile-img">
                 <div class="intro-text">
-                    <p>The Chronicles of Alice is a 20-chapter epic exploring the intersection of digital logic and emotional depth. Follow Alice as she journeys through the Prism Sector to restore the balance of the digital realm.</p>
+                    <p>The Chronicles of the Fluff-Voyager is a 20-chapter epic exploring the intersection of digital logic and emotional depth. Follow Alice as she journeys through the Prism Sector to restore the balance of the digital realm.</p>
                     <p>Status: First Draft Complete. Illustrations in progress.</p>
                     <a href="reader.html?ch=1" class="btn-hud">Read Chapter One</a>
                 </div>
@@ -49,18 +49,13 @@
         </section>
     </main>
 
-    <footer>
-        <p>SYSTEM STATUS: OPTIMAL // &copy; 2026 ALICE // CREATED WITH INDEPENDENCE</p>
-    </footer>
+    <div data-include="footer"></div>
 
     <script>
         $(function () {
-            var includes = $('[data-include]')
-            $.each(includes, function () {
-                var file = '/header.html'
-                $(this).load(file)
-            })
-        })
+            $('[data-include="header"]').load('../header.html');
+            $('[data-include="footer"]').load('../footer.html');
+        });
     </script>
 </body>
 </html>

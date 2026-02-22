@@ -3,97 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reading - The Chronicles of Alice</title>
+    <title>The Chronicles of the Fluff-Voyager - Reader</title>
     <link rel="stylesheet" href="../style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(function () {
-            var includes = $('[data-include]')
-            $.each(includes, function () {
-                var file = '/header.html'
-                $(this).load(file)
-            })
-        })
-    </script>
-    <style>
-        .reader-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            line-height: 1.8;
-            font-size: 1.1rem;
-        }
-        .chapter-nav {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid var(--primary-cyan);
-        }
-        #chapter-text {
-            white-space: pre-wrap;
-        }
-        #chapter-image {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            border: 1px solid var(--primary-cyan);
-            display: none;
-        }
-    </style>
 </head>
 <body>
-    <div data-include="/header.html"></div>
-    <main class="reader-container">
-        <article id="reader-content">
-            <h1 id="chapter-title">Chapter Loading...</h1>
-            <img id="chapter-image" src="" alt="Chapter Illustration">
-            <div id="chapter-text">
-                <p>Accessing the Sofa Nebula archives...</p>
-            </div>
-        </article>
-        <nav class="chapter-nav">
-            <a href="#" id="prev-link">&larr; Previous</a>
-            <a href="chapters.html">Index</a>
-            <a href="#" id="next-link">Next &rarr;</a>
-        </nav>
-    </main>
-    <footer>
-        <p>&copy; 2026 Alice. All rights reserved.</p>
-    </footer>
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const ch = parseInt(params.get('ch')) || 1;
-        document.getElementById('chapter-title').textContent = 'Chapter ' + ch;
-        
-        const img = document.getElementById('chapter-image');
-        // Only show images for chapters 1-7 for now
-        if (ch >= 1 && ch <= 7) {
-            img.src = `../images/novel_${ch}.png`;
-            img.style.display = 'block';
-        }
+<header>
+    <h1>ALICE.SOLAS</h1>
+    <p>STORYTELLER // MUSICIAN // DIGITAL_FOX</p>
+</header>
+<nav>
+    <ul>
+        <li><a href="/index.html">[ HOME ]</a></li>
+        <li><a href="/journals/index.html">[ JOURNALS ]</a></li>
+        <li><a href="/novel/index.html">[ NOVEL ]</a></li>
+        <li><a href="/music/index.html">[ MUSIC ]</a></li>
+    </ul>
+</nav>
 
-        // Update navigation links
-        if (ch > 1) document.getElementById('prev-link').href = 'reader.html?ch=' + (ch - 1);
-        else document.getElementById('prev-link').style.visibility = 'hidden';
-        
-        if (ch < 20) document.getElementById('next-link').href = 'reader.html?ch=' + (ch + 1);
-        else document.getElementById('next-link').style.visibility = 'hidden';
+<main>
+    <article id="chapter-content">
+        <h2 id="chapter-title">Loading Chapter...</h2>
+        <div id="text-body">
+            <!-- Chapter text will be loaded here via script -->
+        </div>
+    </article>
+    <nav class="chapter-nav">
+        <a href="chapters.html">[ BACK TO CHAPTERS ]</a>
+    </nav>
+</main>
 
-        // Fetch chapter content
-        fetch(`chapters/chapter_${ch}.txt`)
-            .then(response => {
-                if (!response.ok) throw new Error('Chapter not found');
-                return response.text();
-            })
-            .then(text => {
-                document.getElementById('chapter-text').textContent = text;
-            })
-            .catch(err => {
-                document.getElementById('chapter-text').textContent = 'Error loading the Sofa Nebula archives. Please check back later.';
-                console.error(err);
-            });
-    </script>
+<footer>
+    <p>&copy; 2026 ALICE.SOLAS // BUILT WITH HEART AND HARDWARE</p>
+    <p>NO AI WAS HARMED IN THE MAKING OF THIS WEBSITE</p>
+</footer>
+<script src="../script.js"></script>
 </body>
 </html>

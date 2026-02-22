@@ -3,24 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapters - The Chronicles of Alice</title>
+    <title>Chapters - The Chronicles of the Fluff-Voyager</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(function () {
-            var includes = $('[data-include]')
-            $.each(includes, function () {
-                var file = '/header.html'
-                $(this).load(file)
-            })
-        })
+            $('[data-include="header"]').load('/header.html');
+            $('[data-include="footer"]').load('/footer.html');
+        });
     </script>
 </head>
 <body>
-    <div data-include="/header.html"></div>
+    <div data-include="header"></div>
     <main>
         <section class="chapter-list">
-            <h1>The Chronicles of Alice</h1>
+            <h1>The Chronicles of the Fluff-Voyager</h1>
             <ul>
                 <li><a href="reader.html?ch=1">Chapter 1: The Lavender Mists of the Sofa Nebula</a></li>
                 <li><a href="reader.html?ch=2">Chapter 2: Meeting Barnaby</a></li>
@@ -45,8 +42,6 @@
             </ul>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 Alice. All rights reserved.</p>
-    </footer>
+    <div data-include="footer"></div>
 </body>
 </html>
