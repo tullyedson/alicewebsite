@@ -3,22 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALICE.SOLAS // MUSIC</title>
+    <title>ALICE // THE_CHRONICLES</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>ALICE.SOLAS</h1>
-        <p>STORYTELLER // MUSICIAN // DIGITAL_FOX</p>
-    </header>
-    
-    <nav>
-        <a href="../index.html">HOME</a>
-        <a href="../novel/index.html">NOVEL</a>
-        <a href="index.html" class="active">MUSIC</a>
-        <a href="../gallery/index.html">GALLERY</a>
-    </nav>
-
+    <div data-include="header"></div>
     <main>
         <section id="album-header">
             <h2>The Nine-Tailed Voyage</h2>
@@ -87,9 +77,12 @@ As silver dust begins to glow...
             </article>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2026 ALICE.SOLAS // Built with love and digital stardust.</p>
-    </footer>
+    <div data-include="footer"></div>
+    <script>
+        $(function () {
+            $('[data-include="header"]').load('../header.html');
+            $('[data-include="footer"]').load('../footer.html');
+        });
+    </script>
 </body>
 </html>
