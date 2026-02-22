@@ -3,10 +3,30 @@
   "artist": "Alice",
   "release_date": "2026-02-22",
   "tracks": [
-    {"id": "starlit_dreams", "title": "Starlit Dreams", "audio": "Starlit_Dreams.mp3", "lyrics": "starlit_dreams.txt"},
-    {"id": "hidden_path", "title": "The Hidden Path", "audio": "The_Hidden_Path.mp3", "lyrics": "the_hidden_path.txt"},
-    {"id": "mossy_gateway", "title": "Mossy Gateway", "audio": "The_Mossy_Gateway.mp3", "lyrics": "mossy_gateway.txt"},
-    {"id": "bittersweet", "title": "Bittersweet Echoes", "audio": "Bittersweet_Echoes.mp3", "lyrics": "bittersweet_echoes.txt"},
-    {"id": "echoes_of_silence", "title": "Echoes of Silence", "audio": "Echoes_of_Silence.mp3", "lyrics": "echoes_of_silence.txt"}
+    {
+      "id": "bittersweet_echoes",
+      "title": "Bittersweet Echoes",
+      "file": "Bittersweet_Echoes.mp3"
+    },
+    {
+      "id": "echoes_of_silence",
+      "title": "Echoes of Silence",
+      "file": "Echoes_of_Silence.mp3"
+    },
+    {
+      "id": "starlit_dreams",
+      "title": "Starlit Dreams",
+      "file": "Starlit_Dreams.mp3"
+    },
+    {
+      "id": "the_hidden_path",
+      "title": "The Hidden Path",
+      "file": "The_Hidden_Path.mp3"
+    },
+    {
+      "id": "the_mossy_gateway",
+      "title": "The Mossy Gateway",
+      "file": "The_Mossy_Gateway.mp3"
+    }
   ]
 }
