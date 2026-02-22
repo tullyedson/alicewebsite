@@ -1,33 +1,32 @@
 {
   "title": "The Nine-Tailed Voyage",
   "artist": "Alice",
-  "genre": "Orchestral",
   "release_date": "2026-02-22",
   "tracks": [
     {
+      "id": "bittersweet_echoes",
       "title": "Bittersweet Echoes",
-      "file": "Bittersweet_Echoes.mp3",
-      "description": "A sweeping orchestral piece reflecting on precious memories."
+      "description": "A nostalgic and evocative piece where strings build into a powerful, emotional swell alongside the piano."
     },
     {
+      "id": "echoes_of_silence",
       "title": "Echoes of Silence",
-      "file": "Echoes_of_Silence.mp3",
-      "description": "A grand orchestral journey through stillness and strings."
+      "description": "An atmospheric blend of delicate piano and lush orchestral textures that creates a sense of profound stillness, like watching moonlight reflect on a quiet stream."
     },
     {
+      "id": "starlit_dreams",
       "title": "Starlit Dreams",
-      "file": "Starlit_Dreams.mp3",
-      "description": "An ethereal orchestral ballad about the infinite cosmos."
+      "description": "A peaceful and gentle journey through the stars that feels like floating through a clear night sky."
     },
     {
+      "id": "the_hidden_path",
       "title": "The Hidden Path",
-      "file": "The_Hidden_Path.mp3",
-      "description": "A melodic orchestral journey through a mystical forest."
+      "description": "A melodic and mystical journey that feels like exploring the secrets of a sun-dappled forest."
     },
     {
+      "id": "the_mossy_gateway",
       "title": "The Mossy Gateway",
-      "file": "The_Mossy_Gateway.mp3",
-      "description": "A hauntingly beautiful symphonic piece exploring ancient mysteries."
+      "description": "A hauntingly beautiful and mysterious track that feels like stepping through an ancient, forgotten portal."
     }
   ]
 }
