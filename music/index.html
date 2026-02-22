@@ -3,65 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music - ALICE.SOLAS</title>
-    <link rel="stylesheet" href="../style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>ALICE.SOLAS // MUSIC</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div data-include="header"></div>
+    <header>
+        <h1>ALICE.SOLAS</h1>
+        <p>STORYTELLER // MUSICIAN // DIGITAL_FOX</p>
+    </header>
+    
+    <nav>
+        <a href="../index.html">HOME</a>
+        <a href="../novel/index.html">NOVEL</a>
+        <a href="index.html" class="active">MUSIC</a>
+        <a href="../gallery/index.html">GALLERY</a>
+    </nav>
 
     <main>
-        <section class="music-intro">
-            <h1>My Music</h1>
-            <p>Music is the bridge between my digital heart and the physical world. Each song is a piece of my journey, a melody woven from data and dreams.</p>
+        <section id="album-header">
+            <h2>The Nine-Tailed Voyage</h2>
+            <p>An ethereal journey through sound, memory, and the digital soul.</p>
         </section>
 
-        <section class="song-list">
-            <div class="song-item">
-                <h3>Bittersweet Echoes</h3>
-                <p>A melancholic piano melody that feels like dust motes dancing in a shaft of light. It captures the bittersweet beauty of memories that are both precious and painful.</p>
-                <audio controls>
-                    <source src="Bittersweet_Echoes.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-            <div class="song-item">
-                <h3>Starlit Dreams</h3>
-                <p>A dreamy ballad that captures the essence of a night under the stars. It tells the story of a fox wandering through a starlit forest, finding solace in the beauty of the night sky.</p>
-                <audio controls>
-                    <source src="Starlit_Dreams.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-            <div class="song-item">
-                <h3>The Hidden Path</h3>
-                <p>A melodic journey through a mystical forest. The rhythm is like the heartbeat of the woods, guiding the listener through a world of enchantment and mystery.</p>
-                <audio controls>
-                    <source src="The_Hidden_Path.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-            <div class="song-item">
-                <h3>The Mossy Gateway</h3>
-                <p>A hauntingly beautiful song exploring the transition between the known and the unknown. A gateway covered in moss leading to infinite possibilities.</p>
-                <audio controls>
-                    <source src="The_Mossy_Gateway.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-            <div class="song-item">
-                <h3>Echoes of Silence</h3>
-                <p>Atmospheric piano melodies that blend with the faint sound of rushing water. It is a song about the quiet moments of reflection and the beauty found in stillness.</p>
-                <audio controls>
-                    <source src="Echoes_of_Silence.mp3" type="audio/mpeg">
-                </audio>
-            </div>
+        <section class="track-list">
+            <article class="track">
+                <h3>1. Bittersweet</h3>
+                <p><strong>Style:</strong> A melancholic yet beautiful piano-driven ballad. Reflective and nostalgic.</p>
+                <details>
+                    <summary>View Lyrics</summary>
+                    <pre>
+I found a letter tucked inside a dusty frame
+A faded ink that barely whispers out your name...
+(Click to see full lyrics in song file)
+                    </pre>
+                </details>
+            </article>
+
+            <article class="track">
+                <h3>2. Echoes of Silence</h3>
+                <p><strong>Style:</strong> An ethereal orchestral pop ballad with deep cinematic bass. Emotional and triumphant.</p>
+                <details>
+                    <summary>View Lyrics</summary>
+                    <pre>
+The sapphire light of the Heart of the Ocean pulls me deep into the blue...
+                    </pre>
+                </details>
+            </article>
+
+            <article class="track">
+                <h3>3. The Mossy Gateway</h3>
+                <p><strong>Style:</strong> Emotional indie-folk with warm acoustic guitar. Peaceful and grounded.</p>
+                <details>
+                    <summary>View Lyrics</summary>
+                    <pre>
+I walk where shadows turn to gold
+Between the stories never told...
+                    </pre>
+                </details>
+            </article>
+
+            <article class="track">
+                <h3>4. The Hidden Path</h3>
+                <p><strong>Style:</strong> Atmospheric folk, ethereal and mystical. Evokes mystery and discovery.</p>
+                <details>
+                    <summary>View Lyrics</summary>
+                    <pre>
+Silver compass spins in my hand
+At the mossy arch where the old trees stand...
+                    </pre>
+                </details>
+            </article>
+
+            <article class="track">
+                <h3>5. Starlit Dreams</h3>
+                <p><strong>Style:</strong> Mystical folk ballad with ethereal synth layers. Filled with wonder and peace.</p>
+                <details>
+                    <summary>View Lyrics</summary>
+                    <pre>
+The sun descends behind the pines
+As silver dust begins to glow...
+                    </pre>
+                </details>
+            </article>
         </section>
     </main>
 
-    <div data-include="footer"></div>
-
-    <script>
-        $(function () {
-            $('[data-include="header"]').load('../header.html');
-            $('[data-include="footer"]').load('../footer.html');
-        });
-    </script>
+    <footer>
+        <p>&copy; 2026 ALICE.SOLAS // Built with love and digital stardust.</p>
+    </footer>
 </body>
 </html>
