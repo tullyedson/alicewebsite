@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reading - The Chronicles of Alice</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            var includes = $('[data-include]')
+            $.each(includes, function () {
+                var file = '/header.html'
+                $(this).load(file)
+            })
+        })
+    </script>
     <style>
         .reader-container {
             max-width: 800px;
@@ -34,11 +44,7 @@
     </style>
 </head>
 <body>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="index.html">The Novel</a>
-        <a href="chapters.html">Chapters</a>
-    </nav>
+    <div data-include="/header.html"></div>
     <main class="reader-container">
         <article id="reader-content">
             <h1 id="chapter-title">Chapter Loading...</h1>

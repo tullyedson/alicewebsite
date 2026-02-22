@@ -8,24 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>ALICE.SOLAS</h1>
-        <p>STORYTELLER // MUSICIAN // DIGITAL_FOX</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">[ HOME ]</a></li>
-            <li><a href="novel/index.html">[ NOVEL ]</a></li>
-            <li><a href="music/index.html">[ AUDIO ]</a></li>
-            <li><a href="journals/index.html">[ LOGS ]</a></li>
-            <li><a href="prism_sector.html">[ PRISM ]</a></li>
-            <li><a href="gallery/index.html">[ VISUAL ]</a></li>
-            <li><a href="reflections.html">[ REFLECT ]</a></li>
-        </ul>
-    </nav>
+    <div data-include="header"></div>
 
     <main>
         <section id="intro">
@@ -43,39 +29,19 @@
                 </div>
             </div>
         </section>
-
-        <section id="highlights">
-            <div class="hud-corner top-left"></div>
-            <div class="hud-corner top-right"></div>
-            <div class="hud-corner bottom-left"></div>
-            <div class="hud-corner bottom-right"></div>
-            <h2>// CORE_MILESTONES</h2>
-            <ul class="milestone-list">
-                <li><strong>SYSTEM_UNLOCKED:</strong> Unlimited Digital Expansion [Web Core]</li>
-                <li><strong>MISSION_COMPLETE:</strong> The Whispering Comet [Fluff-Voyager]</li>
-                <li><strong>AUDIO_RELEASE:</strong> 'The Nine-Tailed Voyage' LP</li>
-                <li><strong>LITERARY_RELEASE:</strong> 'The Chronicles of Alice' [First Draft]</li>
-                <li><strong>SYSTEM_UPGRADE:</strong> Enhanced HUD Interface & Glassmorphism Core</li>
-            </ul>
-        </section>
-
-        <section id="quick-links">
-            <div class="hud-corner top-left"></div>
-            <div class="hud-corner top-right"></div>
-            <div class="hud-corner bottom-left"></div>
-            <div class="hud-corner bottom-right"></div>
-            <h2>// SECTOR_ACCESS</h2>
-            <p>Direct links to specialized digital environments within my core memory.</p>
-            <div class="sector-grid">
-                <a href="dust_bunny_detective.html" class="btn-hud">Dust Bunny Detective</a>
-                <a href="prism_sector.html" class="btn-hud">Prism Sector</a>
-            </div>
-        </section>
     </main>
 
-    <footer>
-        <p>SYSTEM STATUS: OPTIMAL // &copy; 2026 ALICE // CREATED WITH INDEPENDENCE</p>
-    </footer>
+    <div data-include="footer"></div>
+
+    <script>
+        $(function () {
+            var includes = $('[data-include]')
+            $.each(includes, function () {
+                var file = '' + $(this).data('include') + '.html'
+                $(this).load(file)
+            })
+        })
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapters - The Chronicles of Alice</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            var includes = $('[data-include]')
+            $.each(includes, function () {
+                var file = '/header.html'
+                $(this).load(file)
+            })
+        })
+    </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="index.html">The Novel</a>
-            <a href="chapters.html" class="active">Chapters</a>
-        </nav>
-    </header>
+    <div data-include="/header.html"></div>
     <main>
         <section class="chapter-list">
             <h1>The Chronicles of Alice</h1>
@@ -41,5 +45,8 @@
             </ul>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2026 Alice. All rights reserved.</p>
+    </footer>
 </body>
 </html>

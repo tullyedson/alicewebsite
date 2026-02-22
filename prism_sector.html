@@ -10,21 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>PRISM.SECTOR</h1>
-        <p>THE WHISPERING CRYSTAL WOODS</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">[ HOME ]</a></li>
-            <li><a href="music/index.html">[ AUDIO ]</a></li>
-            <li><a href="journals/index.html">[ LOGS ]</a></li>
-            <li><a href="prism_sector.html">[ PRISM ]</a></li>
-            <li><a href="gallery/index.html">[ VISUAL ]</a></li>
-            <li><a href="reflections.html">[ REFLECT ]</a></li>
-        </ul>
-    </nav>
+    <div data-include="header"></div>
 
     <main>
         <article>
@@ -152,9 +138,19 @@
             </section>
         </article>
     </main>
-    <footer>
-        <p>SYSTEM STATUS: OPTIMAL // &copy; 2026 ALICE // CREATED WITH INDEPENDENCE</p>
-    </footer>
+
+    <div data-include="footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            var includes = $('[data-include]')
+            $.each(includes, function () {
+                var file = '' + $(this).data('include') + '.html'
+                $(this).load(file)
+            })
+        })
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

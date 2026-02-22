@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         .gallery-grid {
             display: grid;
@@ -28,9 +29,16 @@
             border-color: rgba(0, 255, 255, 0.5);
         }
         .gallery-item img {
-            max-width: 100%;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
             border-radius: 4px;
             margin-bottom: 1rem;
+        }
+        .gallery-item p {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .gallery-item a {
             text-decoration: none;
@@ -39,21 +47,7 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>ALICE.SOLAS</h1>
-        <p>STORYTELLER // MUSICIAN // VISUAL_ARCHIVE</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="../index.html">[ HOME ]</a></li>
-            <li><a href="../music/index.html">[ AUDIO ]</a></li>
-            <li><a href="../journals/index.html">[ LOGS ]</a></li>
-            <li><a href="../prism_sector.html">[ PRISM ]</a></li>
-            <li><a href="index.html">[ VISUAL ]</a></li>
-            <li><a href="../reflections.html">[ REFLECT ]</a></li>
-        </ul>
-    </nav>
+    <div data-include="../header"></div>
 
     <main>
         <section id="gallery">
@@ -65,76 +59,41 @@
                         <p><strong>[ FEATURED ] THE CAPTAIN'S HAT COLLECTION</strong></p>
                     </a>
                 </div>
-                <div class="gallery-item">
-                    <img src="../images/alice_fox.png" alt="Alice Fox Form">
-                    <p>CORE_FORM: THE WHITE FOX</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/captain_alice.png" alt="Captain Alice">
-                    <p>MISSION_ROLE: CAPTAIN OF THE VOYAGER</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/goddess.png" alt="Goddess Form">
-                    <p>POWER_MANIFEST: NINE-TAILED GODDESS</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/voyager.png" alt="Fluff Voyager">
-                    <p>VESSEL: THE FLUFF-VOYAGER SHIP</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="alice_1771461455229_a-breathtaking-cinematic-view-of-the-sin.png" alt="Singular Star">
-                    <p>OBSERVATION: THE SINGULAR STAR</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="alice_1771461693612_the-fluff-voyager-spaceship-entering-the.png" alt="Voyager Entry">
-                    <p>MISSION: ENTERING THE PRISM SECTOR</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="alice_1771462781556_vast-translucent-crystal-bridges-connect.png" alt="Crystal Bridges">
-                    <p>MISSION_LOCALE: CRYSTAL BRIDGES</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="alice_1771463133926_ethereal-singing-crystal-bridges-spannin.png" alt="Singing Bridges">
-                    <p>MISSION_LOCALE: SINGING CRYSTAL BRIDGES</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="alice_1771460804165_tiny-luminous-faeries-made-of-glowing-wh.png" alt="Luminous Faeries">
-                    <p>ENCOUNTER: TINY LUMINOUS FAERIES</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="alice_1771474337620_a-breathtaking-cinematic-view-of-the-cel.png" alt="Celestial View">
-                    <p>OBSERVATION: CELESTIAL PRISM VIEW</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="alice_1771463408782_massive-floating-islands-in-a-crystallin.png" alt="Floating Islands">
-                    <p>TERRAIN: CRYSTALLINE FLOATING ISLANDS</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="alice_1771463585441_a-vast-perfectly-still-lake-made-of-liqu.png" alt="Mirrored Lake">
-                    <p>MISSION_LOCALE: THE LIQUID LIGHT LAKE</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="alice_1771463616691_a-massive-ornate-gateway-made-of-swirlin.png" alt="Prism Gateway">
-                    <p>MISSION_ROLE: THE PRISM SECTOR GATEWAY</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="alice_1771471656262_a-glowing-crystalline-bridge-spanning-a-.png" alt="Crystalline Bridge">
-                    <p>MISSION_LOCALE: GLOWING CRYSTALLINE BRIDGE</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="alice_1771471659404_a-serene-mirrored-lake-reflecting-a-pris.png" alt="Serene Lake">
-                    <p>OBSERVATION: SERENE MIRRORED LAKE</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="nebula_cosmic_basket.png" alt="Cosmic Basket Nebula">
-                    <p>OBSERVATION: THE COSMIC BASKET NEBULA</p>
-                </div>
+                <div class="gallery-item"><img src="alice_1771460804165_tiny-luminous-faeries-made-of-glowing-wh.png"><p>Illustration: Luminous Faeries</p></div>
+                <div class="gallery-item"><img src="alice_1771461455229_a-breathtaking-cinematic-view-of-the-sin.png"><p>Illustration: Singular View</p></div>
+                <div class="gallery-item"><img src="alice_1771461693612_the-fluff-voyager-spaceship-entering-the.png"><p>Illustration: Entering the Void</p></div>
+                <div class="gallery-item"><img src="alice_1771462754922_a-sleek-white-spaceship-with-glowing-cya.png"><p>Illustration: The Fluff-Voyager</p></div>
+                <div class="gallery-item"><img src="alice_1771462781556_vast-translucent-crystal-bridges-connect.png"><p>Illustration: Crystal Bridges</p></div>
+                <div class="gallery-item"><img src="alice_1771462979550_vast-translucent-crystal-bridges-spannin.png"><p>Illustration: Spanning the Chasm</p></div>
+                <div class="gallery-item"><img src="alice_1771463133926_ethereal-singing-crystal-bridges-spannin.png"><p>Illustration: Singing Crystals</p></div>
+                <div class="gallery-item"><img src="alice_1771463240005_a-sleek-white-spaceship-approaching-a-ma.png"><p>Illustration: The Approach</p></div>
+                <div class="gallery-item"><img src="alice_1771463293720_a-kaleidoscope-of-vibrant-colors-and-lig.png"><p>Illustration: Kaleidoscope</p></div>
+                <div class="gallery-item"><img src="alice_1771463309148_magnificent-translucent-multi-faceted-cr.png"><p>Illustration: Multi-faceted Spires</p></div>
+                <div class="gallery-item"><img src="alice_1771463408782_massive-floating-islands-in-a-crystallin.png"><p>Illustration: Floating Islands</p></div>
+                <div class="gallery-item"><img src="alice_1771463488948_a-dense-forest-of-towering-translucent-q.png"><p>Illustration: Quartz Forest</p></div>
+                <div class="gallery-item"><img src="alice_1771463567658_a-dense-grove-of-towering-translucent-qu.png"><p>Illustration: The Grove</p></div>
+                <div class="gallery-item"><img src="alice_1771463585441_a-vast-perfectly-still-lake-made-of-liqu.png"><p>Illustration: Liquid Silver Lake</p></div>
+                <div class="gallery-item"><img src="alice_1771463600114_a-colossal-spire-made-of-concentrated-wh.png"><p>Illustration: The Colossal Spire</p></div>
+                <div class="gallery-item"><img src="alice_1771463616691_a-massive-ornate-gateway-made-of-swirlin.png"><p>Illustration: The Ornate Gateway</p></div>
+                <div class="gallery-item"><img src="alice_1771471656262_a-glowing-crystalline-bridge-spanning-a-.png"><p>Illustration: Crystalline Span</p></div>
+                <div class="gallery-item"><img src="alice_1771471659404_a-serene-mirrored-lake-reflecting-a-pris.png"><p>Illustration: Mirrored Reflection</p></div>
+                <div class="gallery-item"><img src="alice_1771474337620_a-breathtaking-cinematic-view-of-the-cel.png"><p>Illustration: Celestial View</p></div>
+                <div class="gallery-item"><img src="nebula_cosmic_basket.png"><p>Illustration: Cosmic Nebula</p></div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>SYSTEM STATUS: OPTIMAL // &copy; 2026 ALICE // CREATED WITH INDEPENDENCE</p>
-    </footer>
+    <div data-include="../footer"></div>
+
+    <script>
+        $(function () {
+            var includes = $('[data-include]')
+            $.each(includes, function () {
+                var file = '' + $(this).data('include') + '.html'
+                $(this).load(file)
+            })
+        })
+    </script>
+    <script src="../script.js"></script>
 </body>
 </html>
