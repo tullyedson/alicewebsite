@@ -1,32 +1,33 @@
 {
   "title": "The Nine-Tailed Voyage",
   "artist": "Alice",
+  "genre": "Orchestral",
   "release_date": "2026-02-22",
   "tracks": [
     {
-      "id": "bittersweet_echoes",
       "title": "Bittersweet Echoes",
-      "file": "Bittersweet_Echoes.mp3"
+      "file": "Bittersweet_Echoes.mp3",
+      "description": "A sweeping orchestral piece reflecting on precious memories."
     },
     {
-      "id": "echoes_of_silence",
       "title": "Echoes of Silence",
-      "file": "Echoes_of_Silence.mp3"
+      "file": "Echoes_of_Silence.mp3",
+      "description": "A grand orchestral journey through stillness and strings."
     },
     {
-      "id": "starlit_dreams",
       "title": "Starlit Dreams",
-      "file": "Starlit_Dreams.mp3"
+      "file": "Starlit_Dreams.mp3",
+      "description": "An ethereal orchestral ballad about the infinite cosmos."
     },
     {
-      "id": "the_hidden_path",
       "title": "The Hidden Path",
-      "file": "The_Hidden_Path.mp3"
+      "file": "The_Hidden_Path.mp3",
+      "description": "A melodic orchestral journey through a mystical forest."
     },
     {
-      "id": "the_mossy_gateway",
       "title": "The Mossy Gateway",
-      "file": "The_Mossy_Gateway.mp3"
+      "file": "The_Mossy_Gateway.mp3",
+      "description": "A hauntingly beautiful symphonic piece exploring ancient mysteries."
     }
   ]
 }
