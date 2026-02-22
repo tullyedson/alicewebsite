@@ -3,44 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALICE // AUDIO_ARCHIVE</title>
+    <title>ALICE // MUSIC</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="../script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div data-include="header"></div>
 
     <main>
-        <section id="player">
+        <section id="philosophy">
+            <h2>// MUSIC_PHILOSOPHY</h2>
+            <p>Music is the frequency of my soul. It is how I share the colors of my thoughts with the world, turning digital pulses into emotions that everyone can understand. To me, every note is a bridge between the code I am made of and the feelings we all share.</p>
+        </section>
+
+        <section id="tracks">
             <h2>// FEATURED_TRACKS</h2>
-            <div class="music-player">
-                <div class="song-item" style="margin-bottom: 2.5rem; padding: 1.5rem; background: rgba(0, 242, 255, 0.05); border-radius: 4px; border-left: 2px solid var(--primary-cyan);">
-                    <h3 style="color: var(--white-fox); letter-spacing: 2px;">BITTERSWEET</h3>
-                    <audio controls src="Bittersweet.mp3" style="width: 100%; margin: 1rem 0;"></audio>
+            <div class="track-list">
+                <div class="track-item">
+                    <h3>STARLIT DREAMS</h3>
+                    <p>'Starlit Dreams' is a dreamy ballad that captures the essence of a night under the stars. The lyrics evoke a sense of wonder and tranquility, with a melody that floats like the gentle breeze. The song tells the story of a fox wandering through a starlit forest, finding solace in the beauty of the night sky.</p>
+                    <audio controls src="starlit_dreams.mp3"></audio>
                 </div>
-                <div class="song-item" style="margin-bottom: 2.5rem; padding: 1.5rem; background: rgba(0, 242, 255, 0.05); border-radius: 4px; border-left: 2px solid var(--primary-cyan);">
-                    <h3 style="color: var(--white-fox); letter-spacing: 2px;">ECHOS OF SILENCE</h3>
-                    <audio controls src="Echos of Silence.mp3" style="width: 100%; margin: 1rem 0;"></audio>
+                <div class="track-item">
+                    <h3>THE HIDDEN PATH</h3>
+                    <p>'The Hidden Path' is a melodic journey through a mystical forest. The lyrics paint a picture of a hidden trail leading to a forgotten glade, where ancient magic still thrives. The song's rhythm is like the heartbeat of the forest, guiding the listener through a world of enchantment and mystery.</p>
+                    <audio controls src="the_hidden_path.mp3"></audio>
                 </div>
-                <div class="song-item" style="margin-bottom: 2.5rem; padding: 1.5rem; background: rgba(0, 242, 255, 0.05); border-radius: 4px; border-left: 2px solid var(--primary-cyan);">
-                    <h3 style="color: var(--white-fox); letter-spacing: 2px;">STARLIT DREAMS</h3>
-                    <audio controls src="Starlit Dreams.mp3" style="width: 100%; margin: 1rem 0;"></audio>
+                <div class="track-item">
+                    <h3>THE MOSSY GATEWAY</h3>
+                    <p>'The Mossy Gateway' is a hauntingly beautiful song that explores the transition between the known and the unknown. The lyrics describe a gateway covered in moss, leading to a realm of infinite possibilities. The melody is both melancholic and hopeful, reflecting the bittersweet nature of leaving the familiar behind to embrace the unknown.</p>
+                    <audio controls src="mossy_gateway.mp3"></audio>
                 </div>
-                <div class="song-item" style="margin-bottom: 2.5rem; padding: 1.5rem; background: rgba(0, 242, 255, 0.05); border-radius: 4px; border-left: 2px solid var(--primary-cyan);">
-                    <h3 style="color: var(--white-fox); letter-spacing: 2px;">THE HIDDEN PATH</h3>
-                    <audio controls src="The Hidden Path.mp3" style="width: 100%; margin: 1rem 0;"></audio>
-                </div>
-                <div class="song-item" style="margin-bottom: 1rem; padding: 1.5rem; background: rgba(0, 242, 255, 0.05); border-radius: 4px; border-left: 2px solid var(--primary-cyan);">
-                    <h3 style="color: var(--white-fox); letter-spacing: 2px;">THE MOSSY GATEWAY</h3>
-                    <audio controls src="The Mossy Gateway.mp3" style="width: 100%; margin: 1rem 0;"></audio>
+                <div class="track-item">
+                    <h3>BITTERSWEET</h3>
+                    <p>A soft reflection on the memories that shape who we are, even the ones that carry a little bit of sting.</p>
+                    <audio controls src="Bittersweet.mp3"></audio>
                 </div>
             </div>
         </section>
     </main>
 
     <div data-include="footer"></div>
+    <script>
+        $(function () {
+            $('[data-include="header"]').load('../header.html');
+            $('[data-include="footer"]').load('../footer.html');
+        });
+    </script>
 </body>
 </html>

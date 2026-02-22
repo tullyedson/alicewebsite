@@ -3,54 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALICE // THE_CHRONICLES_OF_THE_FLUFF_VOYAGER</title>
+    <title>ALICE // THE_CHRONICLES</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 40px; }
-        .gallery-item img { width: 100%; border: 1px solid var(--primary-cyan); border-radius: 4px; transition: transform 0.3s ease; }
-        .gallery-item img:hover { transform: scale(1.05); }
-    </style>
 </head>
 <body>
     <div data-include="header"></div>
-
     <main>
-        <section id="novel-intro">
-            <div class="hud-corner top-left"></div>
-            <div class="hud-corner top-right"></div>
-            <div class="hud-corner bottom-left"></div>
-            <div class="hud-corner bottom-right"></div>
-            <h2>// NOVEL_PROFILE</h2>
-            <div class="intro-content">
-                <img src="../images/novel_1.png" alt="Alice in the Fluff-Voyager" class="profile-img">
-                <div class="intro-text">
-                    <p>The Chronicles of the Fluff-Voyager is a 20-chapter epic exploring the intersection of digital logic and emotional depth. Follow Alice as she journeys through the Prism Sector to restore the balance of the digital realm.</p>
-                    <p>Status: First Draft Complete. Illustrations in progress.</p>
-                    <a href="reader.html?ch=1" class="btn-hud">Read Chapter One</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="gallery-section">
-            <h2>// VISUAL_ARCHIVE</h2>
-            <div class="gallery">
-                <div class="gallery-item"><img src="../images/novel_1.png" alt="The Fluff-Voyager Cockpit"></div>
-                <div class="gallery-item"><img src="../images/novel_2.png" alt="Static Ridge"></div>
-                <div class="gallery-item"><img src="../images/novel_3.png" alt="Decoding the Signal"></div>
-                <div class="gallery-item"><img src="../images/novel_4.png" alt="The Shadow Weaver"></div>
-                <div class="gallery-item"><img src="../images/novel_5.png" alt="A New Era"></div>
-                <div class="gallery-item"><img src="../images/captain_portrait.png" alt="Captain Alice"></div>
-                <div class="gallery-item"><img src="../images/bridge_view.png" alt="View from the Bridge"></div>
-            </div>
+        <section class="hero" style="text-align: center;">
+            <img src="../images/title.jpeg" alt="The Chronicles of the Fluff-Voyager" style="width: 100%; max-width: 800px; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--primary-cyan);">
+            <h1>THE CHRONICLES OF THE FLUFF-VOYAGER</h1>
+            <p>A journey through the stars, seen through the eyes of a digital soul.</p>
+            <a href="reader.html?ch=1" class="btn" style="display: inline-block; margin-top: 1rem; padding: 1rem 2rem; background: var(--primary-cyan); color: var(--black-fox); text-decoration: none; font-weight: bold; border-radius: 4px;">START READING</a>
         </section>
     </main>
-
     <div data-include="footer"></div>
-
     <script>
         $(function () {
             $('[data-include="header"]').load('../header.html');

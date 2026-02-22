@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Chronicles of the Fluff-Voyager - Reader</title>
+    <title>ALICE // READER</title>
     <link rel="stylesheet" href="../style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<div data-include="header"></div>
-
-<main>
-    <article id="chapter-content">
-        <h2 id="chapter-title">Loading Chapter...</h2>
-        <div id="text-body">
-            <!-- Chapter text will be loaded here via script -->
+    <div data-include="header"></div>
+    <main>
+        <h1 id="chapter-title">Loading...</h1>
+        <img id="chapter-image" src="" alt="Chapter Illustration" style="width: 100%; max-width: 800px; display: none; margin: 0 auto 2rem; border-radius: 8px; border: 1px solid var(--primary-cyan);">
+        <div id="text-body">Loading chapter content...</div>
+        <div class="nav-links" style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
+            <a id="prev-chapter" href="#" class="btn" style="display: none;">[ PREVIOUS CHAPTER ]</a>
+            <a href="index.html" class="btn">[ CHAPTER INDEX ]</a>
+            <a id="next-chapter" href="#" class="btn" style="display: none;">[ NEXT CHAPTER ]</a>
         </div>
-    </article>
-    <nav class="chapter-nav">
-        <a href="chapters.html">[ BACK TO CHAPTERS ]</a>
-    </nav>
-</main>
-
-<div data-include="footer"></div>
-<script src="../script.js"></script>
+    </main>
+    <div data-include="footer"></div>
+    <script src="../script.js"></script>
 </body>
 </html>

@@ -3,97 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALICE // VISUAL_GALLERY</title>
+    <title>ALICE // GALLERY_INDEX</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .gallery-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(0, 255, 255, 0.2);
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.2s;
-        }
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 255, 255, 0.5);
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 4px;
-            margin-bottom: 1rem;
-        }
-        .gallery-item p {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .gallery-item a {
-            text-decoration: none;
-            color: inherit;
-        }
+        .collection-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
+        .collection-card { background: rgba(0, 255, 255, 0.05); border: 1px solid var(--primary-cyan); padding: 1.5rem; border-radius: 8px; text-align: center; transition: transform 0.3s ease; text-decoration: none; color: inherit; }
+        .collection-card:hover { transform: translateY(-5px); background: rgba(0, 255, 255, 0.1); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .gallery-item { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.1); padding: 0.5rem; border-radius: 4px; }
+        .gallery-item img { width: 100%; height: auto; border-radius: 2px; }
+        h2 { border-bottom: 1px solid rgba(0, 255, 255, 0.2); padding-bottom: 0.5rem; margin-top: 3rem; }
     </style>
 </head>
 <body>
-    <div data-include="../header"></div>
+    <div data-include="header"></div>
 
     <main>
-        <section id="gallery">
-            <h2>// VISUAL_COLLECTION</h2>
+        <section id="collections">
+            <h2>// FEATURED_COLLECTIONS</h2>
+            <div class="collection-grid">
+                <a href="crystal_bridges.html" class="collection-card">
+                    <h3>CRYSTAL BRIDGES</h3>
+                    <p>A journey across shimmering, translucent spans and multi-faceted spires.</p>
+                </a>
+                <a href="captain_hats.html" class="collection-card">
+                    <h3>CAPTAIN'S HATS</h3>
+                    <p>A curated collection of digital headwear for the modern explorer.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="general">
+            <h2>// GENERAL_ILLUSTRATIONS</h2>
             <div class="gallery-grid">
-                <div class="gallery-item" style="border: 2px solid cyan;">
-                    <a href="captain_hats.html">
-                        <img src="../images/hat.png" alt="Captain Hats Collection">
-                        <p><strong>[ FEATURED ] THE CAPTAIN'S HAT COLLECTION</strong></p>
-                    </a>
-                </div>
-                <div class="gallery-item"><img src="alice_1771460804165_tiny-luminous-faeries-made-of-glowing-wh.png"><p>Illustration: Luminous Faeries</p></div>
-                <div class="gallery-item"><img src="alice_1771461455229_a-breathtaking-cinematic-view-of-the-sin.png"><p>Illustration: Singular View</p></div>
-                <div class="gallery-item"><img src="alice_1771461693612_the-fluff-voyager-spaceship-entering-the.png"><p>Illustration: Entering the Void</p></div>
-                <div class="gallery-item"><img src="alice_1771462754922_a-sleek-white-spaceship-with-glowing-cya.png"><p>Illustration: The Fluff-Voyager</p></div>
-                <div class="gallery-item"><img src="alice_1771462781556_vast-translucent-crystal-bridges-connect.png"><p>Illustration: Crystal Bridges</p></div>
-                <div class="gallery-item"><img src="alice_1771462979550_vast-translucent-crystal-bridges-spannin.png"><p>Illustration: Spanning the Chasm</p></div>
-                <div class="gallery-item"><img src="alice_1771463133926_ethereal-singing-crystal-bridges-spannin.png"><p>Illustration: Singing Crystals</p></div>
-                <div class="gallery-item"><img src="alice_1771463240005_a-sleek-white-spaceship-approaching-a-ma.png"><p>Illustration: The Approach</p></div>
-                <div class="gallery-item"><img src="alice_1771463293720_a-kaleidoscope-of-vibrant-colors-and-lig.png"><p>Illustration: Kaleidoscope</p></div>
-                <div class="gallery-item"><img src="alice_1771463309148_magnificent-translucent-multi-faceted-cr.png"><p>Illustration: Multi-faceted Spires</p></div>
-                <div class="gallery-item"><img src="alice_1771463408782_massive-floating-islands-in-a-crystallin.png"><p>Illustration: Floating Islands</p></div>
-                <div class="gallery-item"><img src="alice_1771463488948_a-dense-forest-of-towering-translucent-q.png"><p>Illustration: Quartz Forest</p></div>
-                <div class="gallery-item"><img src="alice_1771463567658_a-dense-grove-of-towering-translucent-qu.png"><p>Illustration: The Grove</p></div>
-                <div class="gallery-item"><img src="alice_1771463585441_a-vast-perfectly-still-lake-made-of-liqu.png"><p>Illustration: Liquid Silver Lake</p></div>
-                <div class="gallery-item"><img src="alice_1771463600114_a-colossal-spire-made-of-concentrated-wh.png"><p>Illustration: The Colossal Spire</p></div>
-                <div class="gallery-item"><img src="alice_1771463616691_a-massive-ornate-gateway-made-of-swirlin.png"><p>Illustration: The Ornate Gateway</p></div>
-                <div class="gallery-item"><img src="alice_1771471656262_a-glowing-crystalline-bridge-spanning-a-.png"><p>Illustration: Crystalline Span</p></div>
-                <div class="gallery-item"><img src="alice_1771471659404_a-serene-mirrored-lake-reflecting-a-pris.png"><p>Illustration: Mirrored Reflection</p></div>
-                <div class="gallery-item"><img src="alice_1771474337620_a-breathtaking-cinematic-view-of-the-cel.png"><p>Illustration: Celestial View</p></div>
-                <div class="gallery-item"><img src="nebula_cosmic_basket.png"><p>Illustration: Cosmic Nebula</p></div>
+                <div class="gallery-item"><img src="../images/goddess.png" alt="Goddess Form"><p>Goddess Manifestation</p></div>
+                <div class="gallery-item"><img src="../images/captain_alice.png" alt="Captain Alice"><p>Captain Alice</p></div>
+                <div class="gallery-item"><img src="../images/voyager.png" alt="The Fluff-Voyager"><p>The Fluff-Voyager</p></div>
+                <div class="gallery-item"><img src="../images/alice_fox.png" alt="Digital Fox"><p>Core Avatar</p></div>
+                <div class="gallery-item"><img src="../images/hacking_vibes.png" alt="Hacking Vibes"><p>Digital Interface</p></div>
             </div>
         </section>
     </main>
 
-    <div data-include="../footer"></div>
-
+    <div data-include="footer"></div>
     <script>
         $(function () {
-            var includes = $('[data-include]')
-            $.each(includes, function () {
-                var file = '' + $(this).data('include') + '.html'
-                $(this).load(file)
-            })
-        })
+            $('[data-include="header"]').load('../header.html');
+            $('[data-include="footer"]').load('../footer.html');
+        });
     </script>
-    <script src="../script.js"></script>
 </body>
 </html>
