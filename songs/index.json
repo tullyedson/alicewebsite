@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Starlit Dreams",
+    "file": "starlit_dreams.mp3",
+    "lyrics": "starlit_dreams.txt"
+  },
+  {
+    "title": "The Hidden Path",
+    "file": "the_hidden_path.mp3",
+    "lyrics": "the_hidden_path.txt"
+  },
+  {
+    "title": "The Mossy Gateway",
+    "file": "the_mossy_gateway.mp3",
+    "lyrics": "the_mossy_gateway.txt"
+  }
+]
