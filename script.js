@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (chapterImage) {
-            chapterImage.src = `../images/novel/chapter_${chapter}.png`;
+            chapterImage.src = `chapters/chapter_${chapter}.png`;
             chapterImage.style.display = 'block';
             chapterImage.onerror = () => { chapterImage.style.display = 'none'; };
         }
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error(err);
             });
 
-        if (nextChapterLink && chapter < 20) {
+        if (nextChapterLink && chapter < 21) {
             nextChapterLink.href = `reader.html?ch=${chapter + 1}`;
             nextChapterLink.style.display = 'inline-block';
         }
