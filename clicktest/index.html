@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Anti-caching meta tags -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <title>10x10 Square Click App</title>
+    <style>
+        /* Reset margins and set the background to white */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #ffffff;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Make canvas fill the entire screen */
+        canvas {
+            display: block;
+        }
+
+        /* Style and position the Start button at the top left */
+        #startButton {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 10;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        #startButton:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Instructions text positioned at the top center */
+        #instructions {
+            position: absolute;
+            top: 25px;
+            width: 100%;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: #333;
+            z-index: 5;
+            pointer-events: none; /* Prevents text from interfering with canvas clicks */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Instructions -->
+    <div id="instructions">click on start then click on the black square. See how close you get.</div>
+
+    <!-- Start Button -->
+    <button id="startButton">Start</button>
+
+    <!-- Canvas -->
+    <canvas id="appCanvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById('appCanvas');
+        const ctx = canvas.getContext('2d');
+        const startBtn = document.getElementById('startButton');
+
+        // Set the canvas resolution to match the window size
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Define the 10x10 square properties
+        const squareSize = 10; 
+        
+        // Variables to hold square coordinates
+        let squareX, squareY;
+
+        // Function to calculate a random position and draw the black square
+        function drawRandomSquare() {
+            // Reserve the top 70 pixels so the square doesn't hide behind the button/text
+            const topMargin = 70; 
+            
+            // Calculate random X and Y within the visible canvas area
+            squareX = Math.random() * (canvas.width - squareSize);
+            squareY = topMargin + Math.random() * (canvas.height - squareSize - topMargin);
+
+            ctx.fillStyle = 'black';
+            ctx.fillRect(squareX, squareY, squareSize, squareSize);
+        }
+
+        // Draw an initial random square on load
+        drawRandomSquare();
+
+        // Start button logic: clears the screen and draws the square in a new location
+        startBtn.addEventListener('click', function() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawRandomSquare();
+        });
+
+        // Listen for mouse clicks on the canvas
+        canvas.addEventListener('click', function(event) {
+            // Get the exact X and Y coordinates of the click
+            const rect = canvas.getBoundingClientRect();
+            const clickX = event.clientX - rect.left;
+            const clickY = event.clientY - rect.top;
+
+            // Check if the click coordinates fall inside the boundaries of the black square
+            const isInsideSquare = 
+                clickX >= squareX && 
+                clickX <= squareX + squareSize &&
+                clickY >= squareY && 
+                clickY <= squareY + squareSize;
+
+            // 1. Draw the small circle
+            ctx.beginPath();
+            ctx.arc(clickX, clickY, 4, 0, Math.PI * 2); // 4px radius circle
+            ctx.fillStyle = isInsideSquare ? 'green' : 'red'; // Green if inside, Red if outside
+            ctx.fill();
+            ctx.closePath();
+
+            // 2. Draw the coordinates text beneath the circle
+            ctx.fillStyle = 'black';
+            ctx.font = '12px Arial';
+            ctx.textAlign = 'center';
+            // Offset the Y coordinate by 18 pixels so the text sits underneath the circle
+            ctx.fillText(`(${Math.round(clickX)}, ${Math.round(clickY)})`, clickX, clickY + 18);
+        });
+
+        // Re-adjust window bounds if the user resizes their browser window
+        window.addEventListener('resize', function() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            // Clamp the square's position to ensure it remains on screen after resizing
+            squareX = Math.min(squareX, canvas.width - squareSize);
+            squareY = Math.min(squareY, canvas.height - squareSize);
+            
+            // Clear and redraw
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'black';
+            ctx.fillRect(squareX, squareY, squareSize, squareSize);
+        });
+    </script>
+</body>
+</html>
