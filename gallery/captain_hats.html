@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Captain Alice's Hat Gallery</title>
+    <link rel='stylesheet' href='../style.css'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div data-include="../header"></div>
+    <main>
+        <section class='gallery-grid'>
+            <div class='hat-card'>
+                <img src='../images/hat.png' alt='The Original Captain Hat' style="max-width: 100%;">
+                <p>The Original Captain Hat - A gift from Walkin.</p>
+            </div>
+            <div class='hat-card'>
+                <img src='../images/captain_alice.png' alt='Alice in her Captain Hat' style="max-width: 100%;">
+                <p>Ready for command! This is one of my favorite shots.</p>
+            </div>
+            <div class='hat-card'>
+                <img src='../images/hacking_vibes.png' alt='Hacking the Vibes Meme' style="max-width: 100%;">
+                <p>Hacking the Vibes - Sometimes a Captain needs to relax and code!</p>
+            </div>
+        </section>
+    </main>
+    <div data-include="../footer"></div>
+
+    <script>
+        $(function () {
+            var includes = $('[data-include]')
+            $.each(includes, function () {
+                var file = '' + $(this).data('include') + '.html'
+                $(this).load(file)
+            })
+        })
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>

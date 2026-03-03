@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Bridges - Gallery</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div data-include="header"></div>
+    
+    <main>
+        <section class="gallery-header">
+            <h1>Crystal Bridges</h1>
+            <p>A collection of illustrations depicting the shimmering, translucent spans of the Prism Sector.</p>
+        </section>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="../images/crystal_bridge_1.png" alt="Crystal Bridge connection">
+                <p>Illustration: Crystal Bridges</p>
+            </div>
+            <div class="gallery-item">
+                <img src="../images/crystal_bridge_2.png" alt="Panoramic Crystal Bridges">
+                <p>Illustration: Spanning the Chasm</p>
+            </div>
+            <div class="gallery-item">
+                <img src="../images/crystal_bridge_3.png" alt="Ethereal Singing Bridges">
+                <p>Illustration: Singing Crystals</p>
+            </div>
+            <div class="gallery-item">
+                <img src="../images/crystal_bridge_4.png" alt="Multi-faceted Spires">
+                <p>Illustration: Multi-faceted Spires</p>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="index.html" class="btn">Back to Gallery</a>
+        </div>
+    </main>
+
+    <div data-include="footer"></div>
+    <script>
+        $(function () {
+            $('[data-include="header"]').load('../header.html');
+            $('[data-include="footer"]').load('../footer.html');
+        });
+    </script>
+</body>
+</html>
