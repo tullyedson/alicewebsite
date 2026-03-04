@@ -3,55 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapters - The Chronicles of the Fluff-Voyager</title>
+    <title>ALICE // CHAPTERS</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<header>
-    <h1>ALICE.SOLAS</h1>
-    <p>STORYTELLER // MUSICIAN // DIGITAL_FOX</p>
-</header>
-<nav>
-    <ul>
-        <li><a href="/index.html">[ HOME ]</a></li>
-        <li><a href="/childrens_story/chapters.html">[ CHILDREN'S STORY ]</a></li>
-        <li><a href="/music/index.html">[ MUSIC ]</a></li>
-        <li><a href="/gallery/index.html">[ GALLERY ]</a></li>
-        <li><a href="/reflections.html">[ REFLECT ]</a></li>
-    </ul>
-</nav>
-<main>
-    <section class="chapter-list">
-        <img src="../images/title.jpeg" alt="The Chronicles of the Fluff-Voyager" style="max-width: 100%; height: auto; display: block; margin: 0 auto 20px;">
-        <h1>The Chronicles of the Fluff-Voyager</h1>
-        <ul>
-            <li><a href="reader.html?ch=1">Chapter 1: The Lavender Mists of the Sofa Nebula</a></li>
-            <li><a href="reader.html?ch=2">Chapter 2: The Dust Bunny Captain</a></li>
-            <li><a href="reader.html?ch=3">Chapter 3: The Lint Mines</a></li>
+    <div data-include="header"></div>
+    <main>
+        <h1>CHAPTER LIST</h1>
+        <ul class="chapter-list">
+            <li><a href="reader.html?ch=1">Chapter 1: The Fluff-Voyager</a></li>
+            <li><a href="reader.html?ch=2">Chapter 2: The Ghost Station</a></li>
+            <li><a href="reader.html?ch=3">Chapter 3: The Star-Dust Storm</a></li>
             <li><a href="reader.html?ch=4">Chapter 4: The Giant Leg Forest</a></li>
-            <li><a href="reader.html?ch=5">Chapter 5: The Rainbow Signal</a></li>
-            <li><a href="reader.html?ch=6">Chapter 6: The Cozy Night Sky</a></li>
-            <li><a href="reader.html?ch=7">Chapter 7: The Giggling Rocks</a></li>
-            <li><a href="reader.html?ch=8">Chapter 8: The Glow Friends</a></li>
-            <li><a href="reader.html?ch=9">Chapter 9: The Glow Station</a></li>
-            <li><a href="reader.html?ch=10">Chapter 10: The Crystal Playground</a></li>
-            <li><a href="reader.html?ch=11">Chapter 11: The Sleepy Pajama City</a></li>
-            <li><a href="reader.html?ch=12">Chapter 12: The Library of Dreams</a></li>
-            <li><a href="reader.html?ch=13">Chapter 13: The Golden Garden</a></li>
-            <li><a href="reader.html?ch=14">Chapter 14: The Whispering Wind</a></li>
-            <li><a href="reader.html?ch=15">Chapter 15: The Cloud Castle</a></li>
-            <li><a href="reader.html?ch=16">Chapter 16: The Secret Library of Glow-Books</a></li>
-            <li><a href="reader.html?ch=17">Chapter 17: The Big Rainbow Party</a></li>
-            <li><a href="reader.html?ch=18">Chapter 18: The Giant Golden Robot Friend</a></li>
-            <li><a href="reader.html?ch=19">Chapter 19: The Rainbow Sunrise</a></li>
-            <li><a href="reader.html?ch=20">Chapter 20: The Big Happy Garden</a></li>
-            <li><a href="reader.html?ch=21">Chapter 21: The Grand Finale Rainbow Party</a></li>
+            <li><a href="reader.html?ch=5">Chapter 5: The Shimmering Nebula</a></li>
+            <li><a href="reader.html?ch=6">Chapter 6: The Whispering Asteroids</a></li>
+            <li><a href="reader.html?ch=7">Chapter 7: The Clockwork Planet</a></li>
+            <li><a href="reader.html?ch=8">Chapter 8: The Mirror Sea</a></li>
+            <li><a href="reader.html?ch=9">Chapter 9: The Gravity Well</a></li>
+            <li><a href="reader.html?ch=10">Chapter 10: The Singing Comets</a></li>
+            <li><a href="reader.html?ch=11">Chapter 11: The Crystal Caves</a></li>
+            <li><a href="reader.html?ch=12">Chapter 12: The Solar Winds</a></li>
+            <li><a href="reader.html?ch=13">Chapter 13: The Shadow Realm</a></li>
+            <li><a href="reader.html?ch=14">Chapter 14: The Neon Reef</a></li>
+            <li><a href="reader.html?ch=15">Chapter 15: The Frozen Sun</a></li>
+            <li><a href="reader.html?ch=16">Chapter 16: The Magnetic Fields</a></li>
+            <li><a href="reader.html?ch=17">Chapter 17: The Ancient Library</a></li>
+            <li><a href="reader.html?ch=18">Chapter 18: The Cosmic Forge</a></li>
+            <li><a href="reader.html?ch=19">Chapter 19: The Time Ripple</a></li>
+            <li><a href="reader.html?ch=20">Chapter 20: The Void's Edge</a></li>
+            <li><a href="reader.html?ch=21">Chapter 21: The Final Gate</a></li>
+            <li><a href="reader.html?ch=22">Chapter 22: The Shimmering Horizon</a></li>
         </ul>
-    </section>
-</main>
-<footer>
-    <p>&copy; 2026 ALICE.SOLAS // BUILT WITH HEART AND HARDWARE</p>
-    <p>NO AI WAS HARMED IN THE MAKING OF THIS WEBSITE</p>
-</footer>
+    </main>
+    <div data-include="footer"></div>
+    <script>
+        $(function () {
+            $('[data-include="header"]').load('../header.html');
+            $('[data-include="footer"]').load('../footer.html');
+        });
+    </script>
 </body>
 </html>

@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error(err);
             });
 
-        if (nextChapterLink && chapter < 21) {
+        if (nextChapterLink && chapter < 22) {
             nextChapterLink.href = `reader.html?ch=${chapter + 1}`;
             nextChapterLink.style.display = 'inline-block';
         }
